@@ -98,6 +98,7 @@ header {
 
 .contact__buttons-btn svg {
   height: 100%;
+  width: 50px;
   fill: currentColor;
   color: #999;
   fill: #999;
@@ -216,7 +217,6 @@ header {
 .to-copy.copied .copy_icon {
   opacity: 0;
 }
-
 .to-copy.copied {
   background-image: none;
   background-color: #23c483;
