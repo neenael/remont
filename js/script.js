@@ -13,6 +13,8 @@ const swiper = new Swiper('.feedback__swiper', {
   direction: 'horizontal',
   loop: true,
   spaceBetween: 20,
+  slidesPerView: 2,
+  slidesPerGroup: 2,
 
   // If we need pagination
   pagination: {
@@ -27,6 +29,19 @@ const swiper = new Swiper('.feedback__swiper', {
   },
 
 
+  breakpoints: {
+
+    768:{
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+  },
+
+
 });
 
 
@@ -37,6 +52,7 @@ copyButton.addEventListener("click", function () {
   var textToCopy = document.getElementById("telephone").innerText;
   copyToClipboard(textToCopy);
 });
+
 function copyToClipboard(text) {
   var textArea = document.createElement("textarea");
   textArea.value = text;
@@ -49,6 +65,8 @@ function copyToClipboard(text) {
 copyButton.addEventListener("click", function () {
   copyButton.classList.add("copied")
 })
+
+
 window.addEventListener("DOMContentLoaded", () => {
   const btn = copyButton;
   var doneTimeout = null,
